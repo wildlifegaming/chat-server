@@ -1453,8 +1453,8 @@ def start_ngrok():
 
 
 if __name__ == "__main__":
-    start_ngrok()
-    time.sleep(2)
-    socketio.run(app, host="0.0.0.0", port=5050, allow_unsafe_werkzeug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))  # Render setzt PORT
+    app.run(host="0.0.0.0", port=port, debug=False)
 
 
