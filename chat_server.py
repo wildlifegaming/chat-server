@@ -1,5 +1,4 @@
 from flask import Flask, request, redirect, url_for, jsonify, session
-from pyngrok import ngrok
 from flask_socketio import SocketIO, emit
 import json, random, os, re, time, threading, subprocess, shutil, hashlib, bcrypt
 
