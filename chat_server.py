@@ -1436,19 +1436,6 @@ def snake_score():
     save_json(SNAKE_SCORES_FILE, lst)
     return jsonify({"ok": True})
 
-# --- Loophole Start ---
-def start_ngrok():
-    print("🚀 Starte Ngrok Tunnel...")
-    ngrok.kill()
-    # Authtoken setzen
-    ngrok.set_auth_token("2y0FF4Z8rbN10Yc1PXxS5m7R83f_5UFXPrue5XwPHkW45WdbU")
-    # Tunnel starten
-    public_url = ngrok.connect(
-        addr=5050,
-        proto="http",
-        hostname="bursting-grossly-quetzal.ngrok-free.app"
-    )
-    print("🌍 Öffentlich erreichbar unter:", public_url)
 
 if __name__ == "__main__":
     import os
